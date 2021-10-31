@@ -1,0 +1,215 @@
+/* Stylesheet by Jack Loveday */
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #BCEAB8;
+    color: #403333;
+}
+
+a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #BCEAB8;
+    transition: color 0.1s;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #696AEA;
+}
+
+button {
+    margin-bottom: 5px;
+    padding: 1%;
+    background-color: #345175;
+    border: 0;
+    font-size: 18px;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: #84addf;
+}
+
+.post-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+textarea,
+input {
+    border-radius: 5px;
+    padding: .5%;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+textarea:focus,
+input:focus {
+    border: 1px solid #3f6da7;
+    outline: none;
+}
+
+textarea {
+    padding: 0.5%;
+    border: 2px solid black;
+    min-width: 50%;
+    min-height: 100px;
+}
+
+form label {
+    display: block;
+}
+
+form>div {
+    margin-bottom: 3%;
+}
+
+.wrapper {
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 2% 4%;
+    flex: 1;
+}
+
+nav {
+    padding: 1.2rem;
+    text-align: right;
+    white-space: pre;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    border-bottom: 1px solid rgb(224, 222, 222);
+    background-color: rgb(61, 58, 58);
+}
+
+header h1 {
+    padding: 1.25%;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 2px outset #726a6a;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-no-style {
+    padding: 0;
+    margin-left: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: bold;
+    background: none;
+    color: #0f5fc0;
+    transition: color 0.1s;
+    border: none;
+}
+
+.btn-no-style:hover {
+    background: none;
+    color: #2774d3;
+}
+
+.post {
+    margin-bottom: 2%;
+    line-height: 150%;
+}
+
+.post .title {
+    font-style: italic;
+    font-size: 120%;
+    color: #797272;
+}
+
+.post .title span {
+    font-style: italic;
+    font-size: 80%;
+    color: #525252;
+}
+
+.delete-post-btn {
+    background-color: #ca1111;
+}
+
+.delete-post-btn:hover {
+    background-color: #e75936;
+}
+
+.edit-link {
+    display: block;
+    margin: -1.5% 0 2% 0;
+}
+
+.upvote-btn {
+    background-color: #29a31e;
+    transition: background-color 0.1s;
+}
+
+.upvote-btn:hover {
+    background-color: #25bd17;
+}
+
+.comment-form {
+    margin-bottom: 5%;
+}
+
+.comment {
+    margin-bottom: 1%;
+    padding: 1%;
+}
+
+.comment:nth-child(odd) {
+    background-color: #b5cdfd;
+}
+
+.comment .meta {
+    margin-bottom: .5%;
+    opacity: .6;
+    font-size: 90%;
+}
+
+.new-post-form input,
+textarea {
+    width: 80%;
+}
+
+.edit-post-form {
+    margin-bottom: 5%;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 1.25rem;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+}
