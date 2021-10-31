@@ -1,0 +1,26 @@
+{{! Edit Post by Jack Loveday}}
+
+<header>
+    <h2> Loveday Tech Blog </h2>
+</header>
+
+<article>
+    <h2> Edit Post </h2>
+    <form class="edit-post-form">
+        <div>
+            {{! Show this posts title}}
+            <input name="post-title" type="text" value="{{post.title}}" />
+        </div>
+        <div>
+            {{! Show the content/text}}
+            <textarea name="post-text">{{post.post_text}}</textarea>
+        </div>
+        {{! Create button options to save, or delete}}
+        <button type="submit">Save Edits</button>
+        <button type="button" class="delete-post-btn">Delete</button>
+    </form>
+</article>
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

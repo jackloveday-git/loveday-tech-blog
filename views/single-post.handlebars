@@ -1,0 +1,28 @@
+{{! Single Post by Jack Loveday}}
+
+<header>
+    <h2> Loveday Tech Blog </h2>
+</header>
+
+{{! Linking post info}}
+{{> post-info post}}
+
+{{! Check for user login status before allowing comments}}
+{{#if loggedIn}}
+<form class="comment-form">
+    <div>
+        {{! Default empty text area}}
+        <textarea name="comment-body"></textarea>
+    </div>
+    <div>
+        {{! Submit/post comment button}}
+        <button type="submit">Send</button>
+    </div>
+</form>
+{{/if}}
+
+{{! Check login again before running script}}
+{{> comments post.comments}}
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
