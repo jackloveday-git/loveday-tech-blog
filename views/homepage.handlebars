@@ -1,0 +1,16 @@
+{{! Homepage by Jack Loveday}}
+
+{{! Standard Header}}
+<header>
+    <h2> Loveday Tech Blog </h2>
+</header>
+
+{{! Simple Post list}}
+<ul class="post-list">
+    {{! Show the posts on your homepage but with no options}}
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post }}
+    </li>
+    {{/each}}
+</ul>

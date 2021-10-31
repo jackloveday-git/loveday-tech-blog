@@ -1,0 +1,49 @@
+{{! Dashboard by Jack Loveday}}
+
+<header>
+    <h1>
+        Your Dashboard
+    </h1>
+</header>
+
+{{! Setup base create post dashboard}}
+<section class="row">
+    <div class="column">
+        <h2>Create Post</h2>
+        <form class="new-post-form">
+            <div>
+                <label for="post-title">Post Title</label>
+                <input type="text" id="post-title" name="post-title" />
+            </div>
+            <div>
+                <label for="post-text">Post Text</label>
+                <textarea id="post-text" name="post-text"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <div class="column">
+        <h2>About Me</h2>
+        {{> user-info}}
+    </div>
+</section>
+
+{{! Display User's posts if there are some existing already}}
+{{#if posts.length}}
+<section>
+    <h1>Your Posts:</h1>
+    <ol>
+        {{! Add to the list for each post}}
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post}}
+            {{! Create edit option for posts}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+
+{{! Call add post script}}
+<script src="/javascript/add-post.js"></script>
