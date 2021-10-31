@@ -1,0 +1,17 @@
+{{! Comment Partial by Jack Loveday}}
+
+{{! Display Current Comment info}}
+<div class="comments">
+    {{#each this}}
+    <section class="comment">
+        <div class="meta">
+            {{! Show poster username}}
+            {{user.username}}
+        </div>
+        <div class="text">
+            {{! Show comment text/content}}
+            {{comment_text}}
+        </div>
+    </section>
+    {{/each}}
+</div>
